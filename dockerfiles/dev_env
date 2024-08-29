@@ -1,0 +1,7 @@
+FROM --platform=i386 i386/alpine:3.20.2
+RUN apk add bash vim python3 gcc make less sed ripgrep gdb git wget
+
+WORKDIR /root
+
+ENV TERM="xterm-256color" SHELL="/bin/bash" EDITOR="vim" LANG="en_US.UTF-8"
+CMD [ "/bin/bash" ]
